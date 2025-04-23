@@ -16,4 +16,4 @@ int main()
 		svar-=20000; ivar-=20000; uvar-=20000;
 	}
 	return 0;
-}`
+}
