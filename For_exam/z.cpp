@@ -1,28 +1,27 @@
-// #include <iostream>
-// using namespace std; 
-// int main()
-// {
-//     int a,b;
-//     unsigned int c,d;
-
-//     a=0x10;
-//     b=0xFB;
-//     c=0x10;
-//     d=0xFB;
-
-//     cout << "a, b의 값은? " << a << ", " << b << endl;
-//     cout << "c, d의 값은? " << c << ", " << d << endl;
-//     return 0;
-// }
-
 #include <iostream>
-using  namespace std;
+#define BUFLEN 16
+using namespace std;
+
 int main() {
-    long a;
-    uint64_t b;
-    a=0x1234567890;
-    b=0x1234567890;
-    cout << "a: "<< a << endl;
-    cout << "b: "<< b <<endl;
+    int arr[BUFLEN];
+    char str[BUFLEN]={'c','o','m','p','u','t','e','r',',','s','y','s','t','e','m',0};
+    int *p;
+    char *q;
+    int i;
+
+    for (i=0; i<BUFLEN; i++)
+        arr[i]=BUFLEN -i;
+
+    p=arr+5;
+    cout << "*(arr + 12) = "<< *(arr + 12)<< endl;
+    cout << "*p = "<< *p << endl;
+
+    q=str+5;
+    cout << "q1 = "<< q<< endl;
+    *(q+3)=0;
+    q=q+4;
+    cout << "q2= " << q << endl;
+    cout << "str = "<< str << endl;
+
     return 0;
 }
